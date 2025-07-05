@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const MiniSchema = new mongoose.Schema({
+const miniSchema = new Schema({
 
     name: {
         type: String,
@@ -40,5 +41,5 @@ const MiniSchema = new mongoose.Schema({
     category:  {
         type: String,
         required: [true, "Category is required!"],
-    },
+    }
 })
