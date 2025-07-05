@@ -31,4 +31,14 @@ const MiniSchema = new mongoose.Schema({
         required: [true, "Sculptor required; enter --Unknown-- if needed."],
         maxLength: [30, "Sculptor must be 30 characters or less!"],
     },
+
+    painted: {
+        type: Boolean,
+        required: [true, "Painted status is required!"],
+    },
+
+    category:  {
+        type: String,
+        required: [true, "Category is required!"],
+    },
 })
