@@ -1,13 +1,30 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const miniSchema = new Schema({
+const MiniSchema = new Schema({
 
     name: {
         type: String,
         required:  [true, "Name required!"],
         maxLength: [30, "Name must be 30 characters or less!"],
         },
+
+    image: {
+        type: String,
+        required: [true, "Image required!"],
+    },
+
+    imageTwo: {
+        type: String,
+    },
+
+    imageThree: {
+        type: String,
+    },
+
+    imageFour: {
+        type: String,
+    },
 
     company: {
         type:  String,
@@ -42,4 +59,9 @@ const miniSchema = new Schema({
         type: String,
         required: [true, "Category is required!"],
     }
-})
+
+}, {timestamps:true});
+
+const Movie = mongoose.model("Miniature", MiniSchema );
+
+module.exports = Miniature;
