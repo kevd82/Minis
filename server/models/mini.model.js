@@ -52,7 +52,7 @@ const MiniSchema = new Schema({
 
     painted: {
         type: Boolean,
-        required: [true, "Painted status is required!"],
+        default: false,
     },
 
     category:  {
