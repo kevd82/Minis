@@ -55,6 +55,10 @@ const MiniSchema = new Schema({
         default: false,
     },
 
+    painter: {
+        type: String
+    },
+
     category:  {
         type: String,
         required: [true, "Category is required!"],
