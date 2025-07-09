@@ -66,6 +66,6 @@ const MiniSchema = new Schema({
 
 }, {timestamps:true});
 
-const Movie = mongoose.model("Miniature", MiniSchema );
+const Mini= mongoose.model("Mini", MiniSchema );
 
-module.exports = Miniature;
+module.exports = Mini;
