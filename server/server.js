@@ -11,6 +11,6 @@ app.use(cors({
 }))
 
 require("./config/mongoose.config")
-//require("./routes/mini.routes")
+require("./routes/mini.routes")
 
 app.listen(8000, ()=>console.log("Connected to port 8000"))
