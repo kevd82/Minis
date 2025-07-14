@@ -59,6 +59,16 @@ const MiniSchema = new Schema({
         type: String
     },
 
+    notes: {
+        type: String,
+        maxLength: [200, "Notes must be 200 characters or less!"],
+    },
+
+    wishList: {
+        type: Boolean,
+        default: false,
+    }
+
 
 }, {timestamps:true});
 
