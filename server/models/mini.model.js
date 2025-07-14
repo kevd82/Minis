@@ -11,7 +11,7 @@ const MiniSchema = new Schema({
 
     image: {
         type: String,
-        required: [true, "Image required!"],
+        required: [true, "Image required; enter --Image Needed-- if necessary!"],
     },
 
     imageTwo: {
@@ -59,10 +59,6 @@ const MiniSchema = new Schema({
         type: String
     },
 
-    category:  {
-        type: String,
-        required: [true, "Category is required!"],
-    }
 
 }, {timestamps:true});
 
