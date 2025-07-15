@@ -6,7 +6,7 @@ module.exports = {
         Miniature.find()
             .then((allMinis)=>{
                 console.log(allMinis);
-                res.json(allMinis)
+                res.json(allMinis);
             })
             .catch((err)=>{
                 console.log("findAllMinis has failed!");
@@ -17,7 +17,7 @@ module.exports = {
     createNewMini: (req, res)=> {
         Miniature.create(req.body)
         .then((newMini)=> {
-            console.log(newMini)
+            console.log(newMini);
             res.json(newMini);
         })
         .catch((err)=> {
@@ -26,7 +26,7 @@ module.exports = {
         })
     },
 
-    findOneMini: (reg, res)=> {
+    findOneMini: (req, res)=> {
         Miniature.findOne({_id: req.params.id})
         .then((oneMini)=>{
             console.log(oneMini);
@@ -57,7 +57,7 @@ module.exports = {
         )
         .then((updatedMini)=> {
             console.log(updatedMini);
-            res.json(updatedMini)
+            res.json(updatedMini);
         })
         .catch((err)=> {
             console.log("Something went wrong with updateMini!");
