@@ -1,9 +1,9 @@
-const Miniature = require("../models/mini.model");
+const Mini = require("../models/mini.model");
 
 module.exports = {
 
     findAllMinis: (req, res) =>{
-        Miniature.find()
+        Mini.find()
             .then((allMinis)=>{
                 console.log(allMinis);
                 res.json(allMinis);
@@ -15,7 +15,7 @@ module.exports = {
     },
 
     createNewMini: (req, res)=> {
-        Miniature.create(req.body)
+        Mini.create(req.body)
         .then((newMini)=> {
             console.log(newMini);
             res.json(newMini);
@@ -27,7 +27,7 @@ module.exports = {
     },
 
     findOneMini: (req, res)=> {
-        Miniature.findOne({_id: req.params.id})
+        Mini.findOne({_id: req.params.id})
         .then((oneMini)=>{
             console.log(oneMini);
             res.json(oneMini);
@@ -39,7 +39,7 @@ module.exports = {
     },
 
     deleteOneMini:  (req, res)=> {
-        Miniature.deleteOne({_id: req.params.id}) 
+        Mini.deleteOne({_id: req.params.id}) 
         .then((deletedMini)=> {
             console.log(deletedMini);
             res.json(deletedMini);
@@ -51,7 +51,7 @@ module.exports = {
     },
 
     updateMini:  (req, res)=> {
-        Miniature.findOneAndUpdate({_id: req.params.id},
+        Mini.findOneAndUpdate({_id: req.params.id},
             req.body,
             {new: true, runValidators: true}
         )
