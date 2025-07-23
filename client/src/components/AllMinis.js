@@ -28,7 +28,13 @@ const AllMinis = (props)=>{
 
     return(
         <div>
+            <header>
+                <h1>
+                    Mini Collection
+                </h1>
+                <Link to ={"/create"}>Create New Miniature</Link>
 
+            </header>
             {
                 miniList.map((mini, index)=>(
                     <div key={mini._id}>
