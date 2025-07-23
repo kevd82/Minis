@@ -29,13 +29,12 @@ const AllMinis = (props)=>{
     return(
         <div>
 
-            mini list stuff
-
             {
                 miniList.map((mini, index)=>(
                     <div key={mini._id}>
                         <p>{mini.name}</p>
                         <p>{mini.company}</p>
+                        <img src={mini.image}/>
                     </div>
                 ))
             }

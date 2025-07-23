@@ -39,9 +39,8 @@ const MiniSchema = new Schema({
     },
 
     year:  {
-        type: String,
+        type: Number,
         required: [true, "Year required; enter --Unknown-- if needed."],
-        maxLength: [4, "Year must be 4 digits or less!"],
     },
 
     sculptor:  {
