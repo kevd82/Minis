@@ -18,14 +18,6 @@ const MiniSchema = new Schema({
         type: String,
     },
 
-    imageThree: {
-        type: String,
-    },
-
-    imageFour: {
-        type: String,
-    },
-
     company: {
         type:  String,
         required:  [true, "Company name required; enter --Unknown-- if needed."],
