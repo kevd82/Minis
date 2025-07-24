@@ -32,6 +32,10 @@ const MiniSchema = new Schema({
         maxLength: [30, "Company must be 30 characters or less!"]
         },
 
+    line: {
+        type: String,
+    },
+
     code:  {
         type: String,
         required: [true, "Code required; enter --Unknown-- if needed."],
@@ -39,8 +43,10 @@ const MiniSchema = new Schema({
     },
 
     year:  {
-        type: Number,
+        type: String,
         required: [true, "Year required; enter --Unknown-- if needed."],
+        minLength: [4, "Year must be 4 digits!"],
+        maxLength: [4, "Year must be 4 digits!"],
     },
 
     sculptor:  {
