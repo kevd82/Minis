@@ -2,6 +2,7 @@ import React, {useEfffect, useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 
+
 const CreateMini = (props)=>{
 
   const [name, setName] = useState("");
@@ -26,7 +27,6 @@ const CreateMini = (props)=>{
 
 
 
-
     return(
         <div>
 
@@ -34,6 +34,14 @@ const CreateMini = (props)=>{
             <h1>Create New Miniature</h1>
             <Link to = "/"> Return Home </Link>
           </header>
+
+          <form>
+            <div>
+              <label>Name</label>
+              <input value={name} onChange = {(e)=> setName(e.target.value)} type="text"/>
+            </div>
+          </form>
+
         </div>
     )
 

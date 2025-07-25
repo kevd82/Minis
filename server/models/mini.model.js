@@ -64,6 +64,12 @@ const MiniSchema = new Schema({
     wishList: {
         type: Boolean,
         default: false,
+    },
+
+    quantity: {
+        type: String,
+        required: [true, "Quantity is required!"],
+        maxLength: [2, "Quantity must be 2 digits or less!"],
     }
 
 
