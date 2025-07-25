@@ -40,6 +40,51 @@ const CreateMini = (props)=>{
               <label>Name</label>
               <input value={name} onChange = {(e)=> setName(e.target.value)} type="text"/>
             </div>
+            <div>
+              <label>Image</label>
+              <input value={image} onChange = {(e)=> setImage(e.target.value)} type="text" />
+            
+              <label>Image Two</label>
+              <input value={imageTwo} onChange = {(e)=> setImageTwo(e.target.value)} type="text" />
+            </div>
+            <div>
+              <label>Company</label>
+              <input value={company} onChange = {(e)=> setCompany(e.target.value)} type="text" />
+            
+            
+              <label>Line</label>
+              <input value={line} onChange = {(e)=> setLine(e.target.value)} type="text" />
+            
+            
+              <label>Code</label>
+              <input value={code} onChange = {(e)=> setCode(e.target.value)} type="text" />
+            </div>
+            <div>
+              <label>Year</label>
+              <input value={year} onChange = {(e)=> setYear(e.target.value)} type="text" />
+            </div>
+            <div>
+              <label>Sculptor</label>
+              <input value={sculptor} onChange = {(e)=> setSculptor(e.target.value)} type="text" />
+            </div>
+            <div>
+              <label>Painted?</label>
+              <input checked={painted} onChange = {(e)=> setPainted(e.target.checked)} type="checkbox" />
+            
+              {
+                (painted==true)?
+                <div>
+                <label>Painter: </label>
+                <input value={painter} onChange = {(e) => setPainter(e.target.value)} type="text" />
+                </div>
+                :null
+              }
+            </div>
+            <div>
+              <label>Notes: </label>
+              <input value={notes} onChange = {(e) => setNotes(e.target.value)} type="text" />
+            </div>
+            
           </form>
 
         </div>
