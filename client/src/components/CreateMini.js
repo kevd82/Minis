@@ -16,10 +16,14 @@ const CreateMini = (props)=>{
   const [painted, setPainted] = useState(false);
   const [painter, setPainter] = useState("");
   const [notes, setNotes] = useState("");
-  const [wishlist, setWishlist] = useState(false);
+  const [wishList, setWishList] = useState(false);
+  const [quantity, setQuantity] = useState("");
 
 
-
+  const submitHandler = (e)=>{
+      e.preventDefault();
+      axios.post()
+  }
 
 
 
@@ -35,7 +39,7 @@ const CreateMini = (props)=>{
             <Link to = "/"> Return Home </Link>
           </header>
 
-          <form>
+          <form onSubmit={submitHandler}>
             <div>
               <label>Name</label>
               <input value={name} onChange = {(e)=> setName(e.target.value)} type="text"/>
@@ -84,6 +88,16 @@ const CreateMini = (props)=>{
               <label>Notes: </label>
               <input value={notes} onChange = {(e) => setNotes(e.target.value)} type="text" />
             </div>
+            <div>
+              <label>Wish List? </label>
+              <input checked={wishList} onChange = {(e) => setWishList(e.target.checked)} type="checkbox" />
+            </div>
+            <div>
+              <label>Quantity: </label>
+              <input value={quantity} onChange = {(e) => setQuantity(e.target.value)} type="text" />
+            </div>
+
+            <button>Create New Mini</button>
             
           </form>
 
