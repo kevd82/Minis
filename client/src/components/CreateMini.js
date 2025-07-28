@@ -19,10 +19,33 @@ const CreateMini = (props)=>{
   const [wishList, setWishList] = useState(false);
   const [quantity, setQuantity] = useState("");
 
+  const navigate = useNavigate(); 
+
 
   const submitHandler = (e)=>{
       e.preventDefault();
-      axios.post()
+      axios.post("http://localhost:8000/api/minis",
+        {
+          name,
+          image, 
+          imageTwo,
+          company,
+          line,
+          code,
+          year,
+          sculptor,
+          painted,
+          painter,
+          notes,
+          wishList,
+          quantity
+        })
+        .then((res)=>{
+          console.log(res);
+          console.log(res.data);
+          navigate("/");
+        })
+        .catch((err)=>console.log(err));
   }
 
 
